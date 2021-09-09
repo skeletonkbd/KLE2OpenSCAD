@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@ijprest/kle-serial": "https://github.com/kevin-wells/kle-serial.git",
-    "gh-pages": "^3.2.3",
     "vue": "^3.2.6"
   },
   "devDependencies": {
