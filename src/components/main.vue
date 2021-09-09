@@ -107,7 +107,7 @@ export default {
 <template>
   <div class="container mx-auto py-10">
     <header class="mb-5">
-      <h1 class="font-bold text-2xl">KLE_data2OpenSCAD</h1>
+      <h1 class="font-bold text-2xl">KLE2OpenSCAD</h1>
       <p>
         <a href="http://www.keyboard-layout-editor.com/" target="_blank"
           >Keyboard Layout Editor</a

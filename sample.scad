@@ -1,4 +1,4 @@
-// KLE2OpenSCAD
+// KLE_data2OpenSCAD
 
 pitch = 19.05; // キーピッチ(mm)
 hole = 14; // キースイッチの穴のサイズ(mm)
