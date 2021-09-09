@@ -4,7 +4,7 @@ import * as kle from '@ijprest/kle-serial'
 export default {
   data: () => ({
     RAW: '',
-    KLE: [],
+    KLE_data: [],
     CODE: '',
     displayCode: false,
   }),
@@ -30,7 +30,7 @@ export default {
         }
 
         let keyboard = kle.Serial.deserialize(data)
-        this.KLE = keyboard.keys
+        this.KLE_data = keyboard.keys
         this.displayCode = true
         console.log(keyboard.keys)
       }
@@ -53,12 +53,12 @@ export default {
 
       let pitch = 19.05
       let hole = 14
-      let code = '// KLE2OpenSCAD\n\n'
+      let code = '// KLE_data2OpenSCAD\n\n'
       code += 'pitch = ' + pitch + '; // キーピッチ(mm)\n'
       code += 'hole = ' + hole + '; // キースイッチの穴のサイズ(mm)\n\n'
       code += '// 0: x, 1: y, 2:r, 3:rx, 4:ry, 5:w, 6:h\n'
       code += 'keys = ['
-      this.KLE.forEach(function (key) {
+      this.KLE_data.forEach(function (key) {
         code +=
           '[' +
           key.x +
@@ -107,7 +107,7 @@ export default {
 <template>
   <div class="container mx-auto py-10">
     <header class="mb-5">
-      <h1 class="font-bold text-2xl">KLE2OpenSCAD</h1>
+      <h1 class="font-bold text-2xl">KLE_data2OpenSCAD</h1>
       <p>
         <a href="http://www.keyboard-layout-editor.com/" target="_blank"
           >Keyboard Layout Editor</a
